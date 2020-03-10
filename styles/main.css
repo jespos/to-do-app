@@ -6,6 +6,11 @@ h1 {
 
 }
 
+.subtitle {
+  color: rgba(45, 45, 45, 0.7)
+  font-size: 7em;
+}
+
 header {
   background: url(../images/sky.jpg) center / cover;
   height: 20vh;
