@@ -1,0 +1,45 @@
+
+h1 {
+  font-weight: bold;
+  color: rgba(45, 45, 45, 0.9);
+  margin: auto;
+
+}
+
+.subtitle {
+  color: rgba(45, 45, 45, 0.7)
+  font-size: 7em;
+}
+
+header {
+  background: url(../images/sky.jpg) center / cover;
+  height: 20vh;
+  justify-content: center;
+  text-align: center;
+}
+
+
+h2.mdl-card__title-text {
+  font-weight: bold;
+}
+
+.todo-card-wide {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdl-textfield {
+  margin-left: 10px;
+}
+
+.mdl-button {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  header.mdl-layout__header {
+    display: flex;
+  }
+}
