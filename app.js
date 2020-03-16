@@ -17,7 +17,7 @@ function onReady() {
       deleteButton.textContent = "Delete";
 
       deleteButton.addEventListener('click', event => {
-        toDos = toDos.filter(function(item){
+        toDos = toDos.filter(function(item){ //going through each object in the array. And, returning only those item.id that are not equal to the toDo.id   in your Delete event listener item is the item you clicked on the delete button for, so you're able to see the id of that item that way.
           return item.id !== toDo.id;
         })
         renderTheUI();
@@ -53,7 +53,7 @@ function onReady() {
     id++;
 
     newToDoText.value = ''; // this clears the text input so the user can enter a new to-do
-
+    localStorage.setItem('title', JSON.stringify(toDos));
     renderTheUI(); // call renderTheUI() each time the state changes. So far, the only time the state changes is when we add a new to-do using the createNewToDo() function
   };
 
@@ -73,4 +73,9 @@ function onReady() {
 
 window.onload = function() {
   onReady();
+  if (localStorage.getItem('title')){
+    toDos = JSON.parse(localStorage.getItem('title'))
+  }else{
+    toDos = []
+  };
 };
